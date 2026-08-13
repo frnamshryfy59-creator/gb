@@ -1,0 +1,234 @@
+2news
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>اخبار و رویدادها | چای‌باغ</title>
+  <meta name="description" content="آخرین اخبار، رویدادها و آیین‌های روستای چای‌باغ" />
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .news-hero {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #fff;
+      padding: 120px 20px 60px;
+      text-align: center;
+      margin-top: var(--header-h);
+    }
+    .news-hero h1 {
+      font-size: 2.2rem;
+      font-weight: 900;
+    }
+    .news-hero p {
+      font-size: 1.05rem;
+      opacity: 0.85;
+      max-width: 600px;
+      margin: 10px auto 0;
+    }
+    .news-hero .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent-light);
+      text-decoration: none;
+      margin-top: 16px;
+      transition: 0.3s;
+    }
+    .news-hero .back-link:hover {
+      gap: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== هدر ===== -->
+  <header class="header" id="header">
+    <div class="header-center">
+      <div class="logo">
+        <img src="https://s25.uupload.ir/files/chaybagh/cbproject/logo/CC_20260730_053755.png"
+             alt="لوگو چای‌باغ"
+             style="height:40px; width:auto; display:block;" />
+        <div>
+          <span class="logo-name">روستای چای باغ</span>
+          <span class="logo-slogan">طبیعت، آرامش، زندگی</span>
+        </div>
+      </div>
+      <nav class="nav" id="nav">
+        <a href="index.html">خانه</a>
+        <a href="index.html#about">معرفی</a>
+        <a href="index.html#products">محصولات</a>
+        <a href="index.html#news" class="active">اخبار</a>
+        <a href="index.html#gallery">گالری</a>
+        <a href="index.html#booking">رزرو</a>
+        <a href="index.html#contact">تماس با ما</a>
+      </nav>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="منو">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- منوی موبایل -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">خانه</a>
+    <a href="index.html#about">معرفی</a>
+    <a href="index.html#products">محصولات</a>
+    <a href="index.html#news">اخبار</a>
+    <a href="index.html#gallery">گالری</a>
+    <a href="index.html#booking">رزرو</a>
+    <a href="index.html#contact">تماس با ما</a>
+  </div>
+
+  <!-- ===== هدر صفحه اخبار ===== -->
+  <section class="news-hero">
+    <h1>اخبار و رویدادهای چای‌باغ</h1>
+    <p>آخرین رویدادها، جشنواره‌ها و اخبار روستای چای‌باغ را در اینجا بخوانید.</p>
+    <a href="index.html#news" class="back-link">
+    </a>
+  </section>
+
+  <!-- ===== لیست کامل اخبار ===== -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>تمام اخبار</h2>
+        <p>آخرین رویدادهای روستای چای‌باغ</p>
+      </div>
+      <div class="news-grid" id="allNewsGrid">
+        <!-- کارت‌های خبر توسط جاوااسکریپت ساخته می‌شوند -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== فوتر ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="margin-bottom:10px;">
+            <img src="https://s25.uupload.ir/files/chaybagh/cbproject/logo/CC_20260730_053755.png"
+                 alt="لوگو چای‌باغ"
+                 style="height:40px; width:auto; display:block;" />
+          </div>
+          <p>روستای چای‌باغ با طبیعتی بکر و مردمی مهمان‌نواز، مقصدی ایده‌آل برای فرار از هیاهوی شهر.</p>
+        </div>
+        <div>
+          <h4>دسترسی سریع</h4>
+          <a href="index.html#hero">خانه</a><br />
+          <a href="index.html#about">معرفی</a><br />
+          <a href="index.html#products">محصولات</a><br />
+          <a href="index.html#news">اخبار</a><br />
+          <a href="index.html#gallery">گالری</a><br />
+          <a href="index.html#booking">رزرو</a>
+        </div>
+        <div>
+          <h4>خدمات</h4>
+          <a href="index.html#booking">اقامتگاه‌ها</a><br />
+          <a href="index.html#contact">راهنمای سفر</a><br />
+          <a href="index.html#contact">تماس با ما</a>
+        </div>
+        <div>
+          <h4>اطلاعات تماس با ما</h4>
+          <p><i class="fas fa-envelope" style="margin-left:8px;color:var(--accent-light);"></i> info@chaybagh.ir</p>
+        </div>
+      </div>
+      <div class="copy">© ۱۴۰۵ - تمامی حقوق برای روستای چای‌باغ محفوظ است.</div>
+    </div>
+  </footer>
+
+  <!-- ===== دکمه برگشت به بالا ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="برگشت به بالا">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+  <script>
+    const allNews = [
+      {
+        title: 'جشن مردگان در چای‌باغ برگزار شد',
+        date: '۲۸ تیر ۱۴۰۵',
+        desc: 'آیین کهن جشن مردگان با حضور گسترده مردم محلی و گردشگران در آرامستان‌های روستا برگزار شد.',
+        img: 'https://s41.uupload.ir/files/chaybagh/cbproject/news/%D8%B9%DB%8C%D8%AF+%D9%85%D8%B1%D8%AF%DA%AF%D8%A7%D9%86.jpg',
+        tag: 'آیین‌ها'
+      },
+      {
+        title: 'جشن تیرگان در چای‌باغ برگزار شد',
+        date: '۱۳ تیر ۱۴۰۵',
+        desc: 'مراسم باستانی تیرگان با آیین «لال شو» و حضور گسترده مردم در روستای چای‌باغ برگزار شد.',
+        img: 'https://s41.uupload.ir/files/chaybagh/cbproject/news/00ei9F6SgvXVnhvOUVXd2.jpeg',
+        tag: 'آیین‌ها'
+      },
+      {
+        title: 'فصل برداشت چای آغاز شد',
+        date: '۵ تیر ۱۴۰۵',
+        desc: 'باغ‌داران چای‌باغ برداشت چای سبز را آغاز کردند.',
+        img: 'https://s41.uupload.ir/files/chaybagh/cbproject/news/%D8%A8%D8%B1%D8%AF%D8%A7%D8%B4%D8%AA+%D8%A8%D8%B1%DA%AF+%D8%B3%D8%A8%D8%B2+%DA%86%D8%A7%DB%8C+.jpg',
+        tag: 'کشاورزی'
+      },
+      {
+        title: 'آسفالت‌کشی خیابان‌های روستا',
+        date: '۲۰ آبان ۱۴۰۴',
+        desc: 'عملیات آسفالت‌کشی معابر و خیابان‌های اصلی روستا با حضور دهیار، اعضای شورای اسلامی و استقبال پرشور اهالی روستا برگزار شد.',
+        img: 'https://s21.uupload.ir/files/chaybagh/cbproject/news/asfalt/IMG_20260729_061604_408.jpg',
+        tag: 'عمرانی'
+      },
+      {
+        title: 'نمایشگاه صنایع دستی در چای‌باغ',
+        date: '۱۰ خرداد ۱۴۰۵',
+        desc: 'نمایشگاه صنایع دستی و محصولات محلی با حضور هنرمندان روستا برگزار شد.',
+        img: 'https://s41.uupload.ir/files/chaybagh/cbproject/news/%DA%AF%D9%84%DB%8C%D9%85.jpg',
+        tag: 'فرهنگی'
+      },
+      {
+        title: 'مراسم شب‌چله در چای‌باغ',
+        date: '۱ دی ۱۴۰۴',
+        desc: 'شب‌چله یا شب یلدا در روستای چای‌باغ با آیین‌های محلی برگزار شد.',
+        img: 'https://s41.uupload.ir/files/chaybagh/cbproject/news/16566895731498.jpeg',
+        tag: 'آیین‌ها'
+      },
+      {
+        title: 'طرح آبرسانی روستایی به بهره‌برداری رسید',
+        date: '۱۵ آذر ۱۴۰۴',
+        desc: 'طرح آبرسانی به روستای چای‌باغ با حضور مسئولان استانی افتتاح شد.',
+        img: 'https://s41.uupload.ir/files/chaybagh/cbproject/news/images.jpg',
+        tag: 'خدماتی'
+      },
+      {
+        title: 'جشنواره محلی غذاهای سنتی',
+        date: '۲۰ آبان ۱۴۰۴',
+        desc: 'جشنواره غذاهای محلی با حضور بانوان روستا و گردشگران برگزار شد.',
+        img: 'https://s41.uupload.ir/files/chaybagh/cbproject/news/VpuVdmJ1PcSGZ1rW-1526317888342.jpg',
+        tag: 'فرهنگی'
+      },
+      {
+        title: 'مراسم لال‌شو در چای‌باغ',
+        date: '۱۳ تیر ۱۴۰۴',
+        desc: 'آیین کهن لال‌شو همزمان با جشن تیرگان در روستای چای‌باغ برگزار شد.',
+        img: 'https://s41.uupload.ir/files/chaybagh/cbproject/news/170719170.jpg',
+        tag: 'آیین‌ها'
+      }
+    ];
+
+    const grid = document.getElementById('allNewsGrid');
+    if (grid) {
+      allNews.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'news-card';
+        card.innerHTML = `
+          <img src="${item.img}" alt="${item.title}" loading="lazy" />
+          <div class="news-content">
+            <span class="news-date"><i class="far fa-calendar-alt"></i> ${item.date}</span>
+            <h3>${item.title}</h3>
+            <p>${item.desc}</p>
+            <span style="display:inline-block; background:var(--accent-lighter); color:var(--primary); font-size:0.7rem; padding:2px 12px; border-radius:20px; font-weight:600; margin-top:6px;">${item.tag}</span>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>
