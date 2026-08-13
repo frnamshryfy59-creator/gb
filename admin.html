@@ -1,0 +1,155 @@
+admin 
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>پنل مدیریت رزروها | چای‌باغ</title>
+  <meta name="description" content="مدیریت رزروهای اقامتگاه‌های بوم‌گردی چای‌باغ" />
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .admin-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+    .admin-header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .admin-header .sub {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .admin-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .admin-actions .btn {
+      height: 40px;
+    }
+    .btn-back {
+      background: #1e293b;
+    }
+    .btn-back:hover {
+      background: #0f172a;
+    }
+    .btn-print {
+      background: #1e293b;
+    }
+    .btn-print:hover {
+      background: #0f172a;
+    }
+    .btn-danger {
+      background: #dc2626;
+    }
+    .btn-danger:hover {
+      background: #b91c1c;
+    }
+    .reservation-card {
+      display: none;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .reservation-card .row {
+      display: flex;
+      justify-content: space-between;
+      padding: 4px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .reservation-card .row:last-child {
+      border-bottom: none;
+    }
+    .reservation-card .label {
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .reservation-card .value {
+      text-align: left;
+    }
+    @media (max-width: 768px) {
+      .table-wrap table {
+        display: none;
+      }
+      .reservation-card {
+        display: block;
+      }
+      .admin-stats {
+        grid-template-columns: 1fr 1fr;
+      }
+      .admin-header h1 {
+        font-size: 1.4rem;
+      }
+    }
+    @media (min-width: 769px) {
+      .reservation-card {
+        display: none !important;
+      }
+    }
+    @media print {
+      .admin-actions,
+      .btn-sm,
+      .no-print {
+        display: none !important;
+      }
+      .reservation-card {
+        display: none !important;
+      }
+      .table-wrap table {
+        display: table !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" style="padding-top:30px;">
+    <div class="admin-header">
+      <div>
+        <h1>📋 مدیریت رزروها</h1>
+        <div class="sub">پنل ادمین · مشاهده و حذف رزروها</div>
+      </div>
+      <div class="admin-actions">
+        <a href="index.html" class="btn btn-back">🏠 برگشت به سایت</a>
+      </div>
+    </div>
+
+    <div class="admin-stats" style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px;">
+      <div class="admin-stat" style="background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:16px; text-align:center; border-color:var(--accent);">
+        <div class="label" style="color:var(--text-muted);">مجموع رزروها</div>
+        <div class="number" id="totalCount" style="font-size:2rem; font-weight:900; color:var(--primary);">۰</div>
+      </div>
+      <div class="admin-stat" style="background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:16px; text-align:center;">
+        <div class="label" style="color:var(--text-muted);">📅 رزروهای امروز</div>
+        <div class="number" id="todayCount" style="font-size:2rem; font-weight:900; color:var(--primary);">۰</div>
+      </div>
+    </div>
+
+    <div class="admin-actions no-print" style="margin-bottom:20px;">
+      <button class="btn btn-print" onclick="window.print()">🖨️ چاپ</button>
+      <button class="btn btn-danger" onclick="clearAll()">🗑️ حذف همه</button>
+    </div>
+
+    <div id="reservationsList">
+      <div class="empty">در حال بارگذاری...</div>
+    </div>
+  </div>
+
+  <button class="back-to-top" id="backToTop" aria-label="برگشت به بالا">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
